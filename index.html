@@ -1,0 +1,179 @@
+<div class="app">
+
+  <header>
+    <h1>🚀 Missile Arena</h1>
+    <div class="money">💰 <span id="money">0</span></div>
+  </header>
+
+  <div id="menu" class="screen active">
+    <div class="card">
+      <h2>🎮 منوی اصلی</h2>
+
+      <div class="profile-mini">
+        <div>👤 سطح: <span id="menuLevel">1</span></div>
+        <div>⭐ XP: <span id="menuXP">0</span></div>
+        <div>💰 پول: <span id="menuMoney">0</span></div>
+      </div>
+
+      <button onclick="startGame()">🎯 شروع بازی</button>
+      <button onclick="showShop()">🛒 فروشگاه</button>
+      <button onclick="showProfile()">👤 پروفایل</button>
+    </div>
+  </div>
+
+
+  <div id="game" class="screen">
+
+    <div class="topbar">
+      <button onclick="backToMenu()">🏠</button>
+
+      <div>
+        ❤️ <span id="health">100</span>
+      </div>
+
+      <div>
+        ⏱️ <span id="timer">30</span>
+      </div>
+    </div>
+
+    <div class="game-stats">
+      <span>🎯 امتیاز: <b id="score">0</b></span>
+      <span>⭐ XP: <b id="xp">0</b></span>
+    </div>
+
+    <div class="equipment">
+
+      <div>
+        🔫 <b id="gameGun">AK-47</b>
+        <br>
+        مهمات:
+        <span id="gameAmmo">10</span>
+      </div>
+
+      <div>
+        🚀 <b id="gameMissile">Scud-B</b>
+        <br>
+        موشک:
+        <span id="gameMissileAmmo">2</span>
+      </div>
+
+    </div>
+
+    <div class="battle">
+
+      <div id="target" class="target">
+        🎯
+      </div>
+
+      <div id="explosion" class="explosion">
+        💥
+      </div>
+
+    </div>
+
+    <div class="attack-buttons">
+      <button onclick="shootGun()">🔫 شلیک</button>
+      <button onclick="shootMissile()">🚀 موشک</button>
+    </div>
+
+    <div id="gameMessage" class="message">
+      آماده‌ای؟
+    </div>
+
+  </div>
+
+
+  <div id="shop" class="screen">
+
+    <div class="shop-header">
+      <button onclick="backToMenu()">🏠</button>
+      <h2>🛒 فروشگاه</h2>
+    </div>
+
+    <h3>🔫 اسلحه‌ها</h3>
+    <div id="gunsShop"></div>
+
+    <h3>🚀 موشک‌ها</h3>
+    <div id="missilesShop"></div>
+
+    <h3>🛡️ سیستم دفاع</h3>
+    <div id="defenseShop"></div>
+
+    <h3>🦺 جلیقه</h3>
+    <div id="vestShop"></div>
+
+  </div>
+
+
+  <div id="profile" class="screen">
+
+    <div class="shop-header">
+      <button onclick="backToMenu()">🏠</button>
+      <h2>👤 پروفایل</h2>
+    </div>
+
+    <div class="profile-card">
+
+      <div class="avatar">👤</div>
+
+      <h2>بازیکن</h2>
+
+      <div class="profile-row">
+        <span>⭐ سطح</span>
+        <b id="profileLevel">1</b>
+      </div>
+
+      <div class="profile-row">
+        <span>XP</span>
+        <b id="profileXP">0</b>
+      </div>
+
+      <div class="profile-row">
+        <span>💰 پول</span>
+        <b id="profileMoney">0</b>
+      </div>
+
+      <hr>
+
+      <div class="profile-row">
+        <span>🔫 اسلحه</span>
+        <b id="profileGun">AK-47</b>
+      </div>
+
+      <div class="profile-row">
+        <span>🔫 مهمات</span>
+        <b id="profileAmmo">10</b>
+      </div>
+
+      <div class="profile-row">
+        <span>🚀 موشک</span>
+        <b id="profileMissile">Scud-B</b>
+      </div>
+
+      <div class="profile-row">
+        <span>🚀 تعداد موشک</span>
+        <b id="profileMissileAmmo">2</b>
+      </div>
+
+      <hr>
+
+      <div class="profile-row">
+        <span>🛡️ دفاع</span>
+        <b id="profileDefense">25%</b>
+      </div>
+
+      <div class="profile-row">
+        <span>🦺 جلیقه</span>
+        <b id="profileVest">25%</b>
+      </div>
+
+      <div class="profile-row">
+        <span>🦺 مقاومت فعلی</span>
+        <b id="profileVestCurrent">25%</b>
+      </div>
+
+    </div>
+
+  </div>
+
+      </div>
